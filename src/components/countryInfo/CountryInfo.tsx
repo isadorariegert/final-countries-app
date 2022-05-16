@@ -3,12 +3,19 @@ import { CountryTS } from '../../models/Country'
 import BackButton from './backButton/BackButton';
 import './CountryInfo.scss'
 
-export default function CountryInfo({ cca3, flags, name, capital, population, borders, languages, currencies}: CountryTS) {
-  const moedas = Object.getOwnPropertyNames(currencies).at(0);
-  var moeda: string = moedas !== undefined ? currencies?.[moedas]?.name : 'Nao existe';
+export default function CountryInfo({ flags, name, capital, population, borders, languages, currencies}: CountryTS) {
+
+  let currencyPropertiesNames, languagePropertyNames;
+
+  if (currencies !== undefined) {
+    currencyPropertiesNames = Object.getOwnPropertyNames(currencies).at(0);
+  }
+  let currency: string = currencyPropertiesNames !== undefined ? currencies?.[currencyPropertiesNames]?.name : 'N/A';
   
-  const linguas = Object.getOwnPropertyNames(languages).at(0);
-  var lingua: string =  linguas !== undefined ? languages?.[linguas] : 'Nao existe';
+  if (languages !== undefined) {
+    languagePropertyNames = Object.getOwnPropertyNames(languages).at(0);  
+  }
+  let language: string =  languagePropertyNames !== undefined ? languages?.[languagePropertyNames] : 'N/A';
 
   return (
     <div className="CardContentContainer">
@@ -21,9 +28,8 @@ export default function CountryInfo({ cca3, flags, name, capital, population, bo
           <h2>{name.common}</h2>
           <p>Capital: {capital}</p>
           <p>Populaçao: {population}</p>
-          <p>Currency: {moeda}</p>
-          <p>Languages: {lingua}</p>
-        
+          <p>Currency: {currency}</p>
+          <p>Languages: {language}</p>
         </div>
       </div>
 
