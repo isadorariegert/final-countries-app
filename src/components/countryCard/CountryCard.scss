@@ -1,0 +1,32 @@
+@import "./../layout/styles/Variables.scss";
+
+.CardContainer {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 30px 20px;
+    box-shadow: 0 20px 20px 15px rgb(13 28 68 / 5%);
+
+    img{
+        width: 200px;
+    }
+
+    h2 {
+        color: $darkBlueColor;
+        font-size: 36px;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 10px;
+        color: $darkBlueColor;
+    }
+
+    @media only screen and (min-width: 790px) {
+        height: 530px;
+    }
+}

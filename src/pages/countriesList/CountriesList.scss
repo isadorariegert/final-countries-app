@@ -1,0 +1,17 @@
+.CountriesListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    @media only screen and (min-width: 790px) {
+        max-width: 1440px;
+        align-items: center;
+        margin: 0 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

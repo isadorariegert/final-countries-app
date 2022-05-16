@@ -1,0 +1,130 @@
+@import "./../layout/styles/Variables.scss";
+
+.CardContentContainer {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 20px;
+
+    &_button {
+        margin-top: 20px;
+    }
+
+    &_image {
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 240px;
+            box-shadow: 0 5px 5px 10px rgba(13 28 68 / 5%);
+        }
+    }
+
+    h2 {
+        color: $darkBlueColor;
+        font-size: 32px;
+        margin: 15px 0;
+    }
+
+    &_text {
+        color: $darkBlueColor;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    &_borders {
+        background-color: $darkBlueColor;
+        border: 2px solid $lightBlueColor;
+        color: $whiteColor;
+        padding: 10px 0 20px 0;
+        text-align: center;
+        margin-top: 10px;
+        width: 300px;
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    &_links{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+        }
+        
+        p{
+            border: 1px solid $lightBlueColor;
+            color: $lightBlueColor;
+            font-weight: 500;
+            margin: 10px;
+            padding: 10px;
+
+            &:hover {
+                background-color: $lightBlueColor;
+                color: $darkBlueColor;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        max-width: 1024px;
+        height: 800px;
+        padding: 40px 0;
+        justify-content: space-around;
+        
+        &_country {
+            display: flex;
+            width: 100%;
+        }
+
+        &_image {
+            width: 65%;
+            margin-top: 15px;
+
+            img {
+                width: 340px;
+            }
+        }
+
+        &_text {
+            width: 35%;
+        }
+
+        &_borders {
+            margin-top: 40px;
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        max-width: 1024px;
+        padding: 40px 0;
+        
+        &_country {
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &_image {
+            width: 50%;
+
+            img {
+                width: 440px;
+            }
+        }
+
+        &_text {
+            width: 40%;
+        }
+
+        &_borders {
+            margin-top: 40px;
+        }
+    }
+}

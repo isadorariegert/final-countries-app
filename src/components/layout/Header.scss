@@ -1,0 +1,13 @@
+.HeaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 28, 69, 1);
+    padding: 3em 0;
+
+    h1 {
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    }
+}

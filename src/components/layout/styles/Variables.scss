@@ -1,0 +1,26 @@
+// Colors
+$whiteColor: #fff;
+$lightBlueColor: #00fad3;
+$darkBlueColor: #0d1c44;
+$purpleColor: #953fff;
+$redColor: #ed2c2c;
+
+// Styles
+@mixin buttonStyle($backgroundColor, $fontColor) {
+    display: flex;
+    width: 160px;
+    height: 55px;
+    margin-top: 15px;
+    padding: 0 30px;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    border-radius: 30px;
+    background-color: $backgroundColor;
+    color: $fontColor;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}

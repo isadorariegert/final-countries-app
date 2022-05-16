@@ -1,0 +1,5 @@
+@import "./../../layout/styles/Variables.scss";
+
+.LinkButton {
+    @include buttonStyle($lightBlueColor, $darkBlueColor);
+}

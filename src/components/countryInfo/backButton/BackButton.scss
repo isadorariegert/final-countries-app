@@ -1,0 +1,5 @@
+@import "./../../layout/styles/Variables.scss";
+
+.BackButton {
+    @include buttonStyle($redColor, $whiteColor);
+}
